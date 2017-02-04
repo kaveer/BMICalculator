@@ -123,7 +123,17 @@ public class Programme extends Fragment {
 
     private boolean IsValid() {
         boolean result = true;
-        
+
+        if (weight.getText().toString().trim().length() == 0){
+            weight.setError("Enter your weight");
+            return false;
+        }
+
+        if (height.getText().toString().trim().length() == 0){
+            height.setError("Enter your height");
+            return false;
+        }
+
         return result;
     }
 
